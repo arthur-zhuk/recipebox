@@ -34,8 +34,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
         <div className="App-header">
+          <Header />
+          {this.props.children}
           <h2>Recipe Box</h2>
         </div>
         <div className="container">
