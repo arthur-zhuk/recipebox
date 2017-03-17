@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import RecipeBoxList from './components/recipe_box_list';
 import ModalPopup from './components/modal_popup';
+import Header from './components/header';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +25,6 @@ class App extends Component {
   onRecItemEditClick() {
     // Open modal and grab data values from localStorage
     this.setState({ recData: Object.entries(localStorage) });
-    console.log('nothing');
   }
 
   updateVDOM() {
@@ -35,6 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <div className="App-header">
           <h2>Recipe Box</h2>
         </div>
